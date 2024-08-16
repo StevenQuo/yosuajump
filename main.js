@@ -11,6 +11,7 @@ loadSprite("background", "assets/img/background.jpeg");
 loadSprite("yosua", "assets/img/eka.png");
 loadSprite("elang", "assets/img/elang.jpeg");
 loadSprite("gusambo", "assets/img/gusambo.png");
+loadSound("patuk", "assets/sound/patuk.mp3");
 
 scene("game", () => {
     // define gravity
@@ -89,6 +90,7 @@ function destroyBirds() {
 // Add an onDoubleJump event to trigger the spin
 yosua.onDoubleJump(() => {
     yosua.spin();
+    play("patuk");
 });
 
     // jump when user press space
