@@ -60,8 +60,8 @@ scene("game", () => {
         require: ["rotate"],
         update() {
             if (spinning) {
-                this.angle -= speed * dt();
-                if (this.angle <= -360) {
+                this.angle += speed * dt();
+                if (this.angle >= 360) {
                     spinning = false;
                     this.angle = 0;
                 }
